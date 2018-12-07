@@ -1,0 +1,27 @@
+﻿<Window x:Class="wndSearch.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wndSearch"
+        mc:Ignorable="d"
+        Title="Search" Height="450" Width="800" FontSize="14" FontWeight="Bold" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="invoiceGrid" HorizontalAlignment="Left" Margin="23,223,0,0" Height="186" Width="558" VerticalAlignment="Top" BorderBrush="#FF7095B9" HorizontalGridLinesBrush="#FF0A047E" VerticalGridLinesBrush="#FF0A047E" FontSize="14" FontFamily="Book Antiqua" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="cmboxInvoiceID" HorizontalAlignment="Left" Margin="50,140,0,0" VerticalAlignment="Top" Width="150" SelectionChanged="cmboxInvoiceID_SelectionChanged"/>
+        <ComboBox x:Name="cmboxInvoicePrice" HorizontalAlignment="Left" Margin="345,140,0,0" VerticalAlignment="Top" Width="150" SelectionChanged="cmboxInvoicePrice_SelectionChanged" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="cmboxInvoiceDate" HorizontalAlignment="Left" Margin="218,143,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1" SelectionChanged="cmboxInvoiceDate_SelectionChanged"/>
+        <Button x:Name="cmdSelect" Content="Select" HorizontalAlignment="Left" Margin="206,226,0,0" VerticalAlignment="Top" Width="162" Height="65" FontSize="18" Grid.Column="1" Click="cmdSelect_Click"/>
+        <Button x:Name="cmdCancel" Content="Cancel" HorizontalAlignment="Left" Margin="206,328,0,0" VerticalAlignment="Top" Width="162" Height="65" FontSize="18" Grid.Column="1" Click="cmdCancel_Click"/>
+        <Label x:Name="lblInvoiceID" Content="Invoice ID" HorizontalAlignment="Left" Margin="50,101,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="lblInvoicePrice" Content="Invoice Price" HorizontalAlignment="Left" Margin="345,101,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblInvoiceDate" Content="Invoice Date" HorizontalAlignment="Left" Margin="218,104,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Grid.Column="1"/>
+        <Label x:Name="lblInvoiceChoice" Content="Please select the invoice of your choice below" HorizontalAlignment="Left" Margin="133,184,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblTitle" Content="Invoice Search Form" HorizontalAlignment="Left" Margin="162,22,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,26 @@
+﻿<Window x:Class="Main.wndMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Main"
+        mc:Ignorable="d"
+        Title="wndMain" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Menu DockPanel.Dock="Top" Height="20" VerticalAlignment="Top" Width="Auto">
+            <MenuItem Header="Search">
+                <MenuItem Header="Invoice" Click="MenuItem_Click"/>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Items" Click="MenuItem_Click_1"/>
+            </MenuItem>
+        </Menu>
+        <DataGrid x:Name="dataGridView1" HorizontalAlignment="Left" Height="274" Margin="25,44,0,0" VerticalAlignment="Top" Width="289" SelectionChanged="dataGridView_SelectionChanged" Visibility="Visible"/>
+        <Button x:Name="create_btn" Content="Create" HorizontalAlignment="Left" Margin="25,339,0,0" VerticalAlignment="Top" Width="246" Click="Create_btn_Click" />
+        <Button x:Name="edit_btn" Content="Edit" HorizontalAlignment="Left" Margin="276,339,0,0" VerticalAlignment="Top" Width="246"/>
+        <Button x:Name="delete_btn" Content="Delete" HorizontalAlignment="Left" Margin="527,339,0,0" VerticalAlignment="Top" Width="246" Click="delete_btn_Click"/>
+        <DataGrid x:Name="dataGridView2" HorizontalAlignment="Left" Height="274" Margin="319,44,0,0" VerticalAlignment="Top" Width="153" Visibility="Visible" SelectionChanged="DataGridView2_SelectionChanged"/>
+        <DataGrid x:Name="dataGridView3" HorizontalAlignment="Left" Height="274" Margin="477,44,0,0" VerticalAlignment="Top" Width="296" Visibility="Visible"/>
+
+    </Grid>
+</Window>
